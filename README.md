@@ -1,6 +1,3 @@
-# spellJS
-SpellJS: Read big numbers using JavaScript (up to  10^303) 
-
 SpellJS
 ===========
 
@@ -25,7 +22,7 @@ There are 3 ways to use it:
 
 	2.  Using String Object method
 ```javascript
-		 "123".spell();  //"one hundred twenty three"
+		 "12312312321321313123123123123123".spell();   //"twelve nonillion  , three hundred twelve octillion  , three hundred twelve septillion  , three hundred twenty one sextillion  , three hundred twenty one quintillion  , three hundred thirteen quadrillion  , one hundred twenty three trillion  , one hundred twenty three billion  , one hundred twenty three million  , one hundred twenty three thousand  , one hundred twenty three"
 ```
 
 	3. Using Number Object method
@@ -57,7 +54,7 @@ So way around numbers is as follow:
 ```javascript
 	 -(2^53 - 1) and 2^53 - 1
 ```
-The Number.MAX_SAFE_INTEGER constant represents the maximum safe integer in JavaScript (253 - 1).
+The Number.MAX_SAFE_INTEGER constant represents the maximum safe integer in JavaScript (2^53 - 1).
 
 ```javascript
 	Number.MAX_SAFE_INTEGER   // 9007199254740991
@@ -66,24 +63,26 @@ The Number.MAX_SAFE_INTEGER constant represents the maximum safe integer in Java
 
 So using the spell method on very long numbers will cause trouble. i.e.
  ```javascript
-	21321312312321321312313123123..spell();
-	spell(21321312312321321312313123123);
+	21321312312321321312313123123..spell();    //invalid input
+	spell(21321312312321321312313123123);		//invalid input
 ```
 So best approach is to prefer string equivalents of them :
 ```javascript
-	"21321312312321321312313123123".spell();
+	"21321312312321321312313123123".spell(); 
 	spell("21321312312321321312313123123");
 
-	//Because it will returns String value not Number value of input
 	document.querySelector("#input").value.trim().spell();   
 	$("#input").val().trim().spell()
+	//Because it returns String value not Number value of input
 ```
 
 3. Preceding a number with 0  causes JavScript to interpret it as an Octadecimal number (Base 8, 0-7 digits).
 ```javascript
 	spell(070)    // outputs "fifty six"
-	spell(080)    // outputs "eighty"    because if it were octadecimal 8 should not be there. Hence the default binary
+	spell(080)    // outputs "eighty"    
+	//because if it were octadecimal 8 should not be there. Hence treated as default i.e. binary
  ```
+ 
  Likewise numbers preceding with 0x are hexadecimal.
  Hence safest approach as discussed earlier is to use string equivalent!!!
 ```javascript
