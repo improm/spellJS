@@ -16,14 +16,15 @@ var spell = function(userInput) {
         else if (typeof(this) == "object") {
             numToWorkOn = this.toString();
         } else {
-            throw new Error("Invalid Input");
-            return;
+            return "Invalid Input";
         }
 
+        var reg = new RegExp('^[0-9]+$');
         //Put limit check on the program, placevalue map should be increased to increase capacity
         if (numToWorkOn.length >= 303) {
-            throw new Error("Number out of bonds!");
-            return;
+            return "Number out of bonds!";
+        } else if (!numToWorkOn.length || !reg.test(numToWorkOn)) {
+            return "Invalid Input";
         } else {
             return convertToString(numToWorkOn);
         }
