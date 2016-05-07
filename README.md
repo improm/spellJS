@@ -19,18 +19,18 @@ There are 3 ways to use it:
 
 	1.  Using function call:
 ```javascript
-		 spell(124);
-		 spell("123");
+		 spell(124);  	//"one hundred twenty four"
+		 spell("123");	//"one hundred twenty three"
 ```
 
 	2.  Using String Object method
 ```javascript
-		 "123".spell();
+		 "123".spell();  //"one hundred twenty three"
 ```
 
 	3. Using Number Object method
 ```javascript
-		  123..spell();
+		  123..spell();	//"one hundred twenty three"
 ```
 Precaution when using spellJS
 -----------------------	
