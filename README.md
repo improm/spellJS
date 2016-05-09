@@ -61,10 +61,15 @@ The Number.MAX_SAFE_INTEGER constant represents the maximum safe integer in Java
 	Math.pow(2, 53) - 1        // 9007199254740991
 ```
 
-So using the spell method on very long numbers will cause trouble. i.e.
+So using the spell method on very long numbers will cause trouble. A loss of precision occurs.  i.e.
  ```javascript
-	21321312312321321312313123123..spell();    //invalid input
-	spell(21321312312321321312313123123);		//invalid input
+ 	console.log(21321312312321321312313123123)  //2.1321312312321322e+28
+ 	// So a loss of precision occurs here  
+
+	21321312312321321312313123123..spell();    //"two hundred thirteen Tredecillion  , two hundred thirteen duodecillion  , one hundred twenty three undecillion  , one hundred twenty three decillion  , two hundred thirteen nonillion  , two hundred twenty octillion "
+	spell(21321312312321321312313123123);		//"two hundred thirteen Tredecillion  , two hundred thirteen duodecillion  , one hundred twenty three undecillion  , one hundred twenty three decillion  , two hundred thirteen nonillion  , two hundred twenty octillion "
+
+
 ```
 So best approach is to prefer string equivalents of them :
 ```javascript
