@@ -19,11 +19,27 @@ var spell = function(userInput) {
             return "Invalid Input";
         }
 
-        var reg = new RegExp('^[0-9]+$');
         //Put limit check on the program, placevalue map should be increased to increase capacity
         if (numToWorkOn.length >= 303) {
             return "Number out of bonds!";
-        } else if (!numToWorkOn.length || !reg.test(numToWorkOn)) {
+        } else if (!numToWorkOn.length) {
+            return "Invalid Input";
+        }
+
+        // to hadle long numbers which are converted to exponential forms e.g.  1.21313e+213
+        if (numToWorkOn.indexOf("e+") !== -1) {
+            var splittedExponentNum = numToWorkOn.split("e+"),
+                exponent = splittedExponentNum[1],
+                str = '';
+            while (exponent--) {
+                str = str + '0';
+            }
+            numToWorkOn = splittedExponentNum[0].split(".").join("") + str;
+        }
+
+        //To check our final string against invalid entries 
+        var reg = new RegExp('^[0-9]+$');
+        if (!reg.test(numToWorkOn)) {
             return "Invalid Input";
         } else {
             return convertToString(numToWorkOn);
