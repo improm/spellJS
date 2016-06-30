@@ -6,6 +6,8 @@ A simple JavaScript library which provides the pronunciation of long numbers. Re
 Installation
 ------------
 ```javascript
+// based on use case
+	npm install spelljs
 	bower install spelljs
 ```
 
