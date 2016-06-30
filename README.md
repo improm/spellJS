@@ -9,7 +9,7 @@ Installation
 	bower install spelljs
 ```
 
-Just include spell.js file in your project and start using.
+Or you can just include spell.js file if you want.
 
 
 Usage
