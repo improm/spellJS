@@ -5,6 +5,9 @@ A simple JavaScript library which provides the pronunciation of long numbers. Re
 
 Installation
 ------------
+```javascript
+	bower install spelljs
+```
 
 Just include spell.js file in your project and start using.
 
