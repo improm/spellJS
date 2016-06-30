@@ -1,0 +1,24 @@
+{
+  "name": "spelljs",
+  "version": "1.0.0",
+  "description": "A simple JavaScript library which provides the pronunciation of long numbers. Read long number up to 303 digits (10^303)",
+  "main": "spell.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PromilBhardwaj/spellJS.git"
+  },
+  "keywords": [
+    "spell long numbers",
+    "pronounce long numbers",
+    "number to string"   
+  ],
+  "author": "Promil Bhardwaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PromilBhardwaj/spellJS/issues"
+  },
+  "homepage": "https://github.com/PromilBhardwaj/spellJS#readme"
+}
