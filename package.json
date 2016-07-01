@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PromilBhardwaj/spellJS.git"
+    "url": "git+https://github.com/improm/spellJS.git"
   },
   "keywords": [
     "spell long numbers",
@@ -18,7 +18,7 @@
   "author": "Promil Bhardwaj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PromilBhardwaj/spellJS/issues"
+    "url": "https://github.com/improm/spellJS/issues"
   },
-  "homepage": "https://github.com/PromilBhardwaj/spellJS#readme"
+  "homepage": "https://github.com/improm/spellJS#readme"
 }
